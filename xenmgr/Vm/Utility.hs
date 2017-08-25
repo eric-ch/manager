@@ -79,7 +79,7 @@ tapCreateAio = tapCreate "aio"
 tapDestroy :: String -> IO ()
 tapDestroy path =
     do
-        tapInfo <- readProcess "tap-ctl" ["list", "-f", path] ""
+        tapInfo <- readProcessOrDie "tap-ctl" ["list", "-f", path] ""
         destroyTap (words tapInfo)
     where
         destroyTap info =
