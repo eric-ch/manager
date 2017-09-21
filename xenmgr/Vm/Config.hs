@@ -836,6 +836,8 @@ miscSpecs cfg = do
           , ("serial"          , vmSerial)
           , ("stubdom_cmdline" , vmStubdomCmdline)
           , ("stubdom_memory"  , vmStubdomMemory)
+          , ("iomem"           , vmPassthroughMmio)
+          , ("ioports"         , vmPassthroughIo)
           ]
 
       -- xl config handles certain options different than others (eg. quotes, brackets)
@@ -852,6 +854,8 @@ miscSpecs cfg = do
                                 _       -> case name of
                                              "viridian" -> name ++ "=" ++ (wrapBrackets $ wrapQuotes v)
                                              "serial"   -> name ++ "=" ++ (wrapBrackets $ wrapQuotes v)
+                                             "iomem"   -> name ++ "=" ++ (wrapBrackets $ wrapQuotes v)
+                                             "ioports"   -> name ++ "=" ++ (wrapBrackets $ wrapQuotes v)
                                              "extra"    -> case v of
                                                            "" -> []
                                                            _  -> name ++ "=" ++ (wrapQuotes v)
