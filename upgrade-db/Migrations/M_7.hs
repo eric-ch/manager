@@ -20,7 +20,7 @@
 module Migrations.M_7 (migration) where
 
 import Control.Monad
-import Directory
+import System.Directory
 import Data.List
 import System.Posix.Files
 

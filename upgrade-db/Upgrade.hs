@@ -23,9 +23,9 @@ import Control.Monad
 import Control.Exception
 import Control.Applicative
 
-import System
+import System.Exit
 import System.IO
-import Directory
+import System.Directory
 
 import ShellTools
 import InformTools
