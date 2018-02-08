@@ -42,8 +42,7 @@ import qualified Data.Map as Map
 import Data.Map (Map)
 import qualified Data.ByteString.UTF8 as UTF8
 import qualified Control.Exception as E
-import qualified Data.HashTable as H
-import Data.HashTable (HashTable)
+import qualified Data.HashTable.IO as H
 import System.IO
 import Data.ByteString (ByteString, isPrefixOf)
 import qualified Data.ByteString as BS
