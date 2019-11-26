@@ -69,7 +69,7 @@
     "vkbd" : "true",
     "vfb" : "true",
     "argo" : "true",
-    "memory-min": "192",
+    "memory-min": "256",
     "memory": "256",
     "display": "none",
     "cmdline": "root=\/dev\/xvda1 console=hvc0",
