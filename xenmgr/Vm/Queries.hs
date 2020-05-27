@@ -179,16 +179,12 @@ allVms :: MonadRpc e m => m [Uuid]
 allVms = map fromString <$> dbList "/vm"
 
 -- VMS with corrupt configs
+-- TODO: need implementation
 getConfigCorruptionInfo :: Rpc [(Uuid,String)]
 getConfigCorruptionInfo = do
     vms  <- allVms
     cfgs <- mapM (\uuid -> getVmConfig uuid False) vms
-    return $ foldl' f [] cfgs
-  where
-    f acc cfg =
-        case diagnose cfg of
-          []   ->  acc
-          p:ps -> (vmcfgUuid cfg,p) : acc
+    return []
 
 -- VMS with correct configs
 -- UPDATE: removed the correctness check, it was slowing the RPC extremely and does not protect
