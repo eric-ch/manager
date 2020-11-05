@@ -69,7 +69,7 @@
     "memory-min": "192",
     "memory": "256",
     "display": "none",
-    "cmdline": "root=\/dev\/xvda1 console=hvc0",
+    "cmdline": "root=\/dev\/xvda1 console=hvc0 xenbus.wait_nonessentials=false",
     "kernel-extract": "\/boot\/bzImage",
     "flask-label": "system_u:system_r:uivm_t",
     "disk": {
